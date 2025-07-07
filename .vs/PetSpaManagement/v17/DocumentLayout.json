@@ -1,0 +1,193 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|e:\\semester5\\prn212\\assignment\\petspamanagement\\petspamanagement\\servicemanagement.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|solutionrelative:petspamanagement\\servicemanagement.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{27C6A94E-F215-4AD4-A35C-CC071FE3BA6B}|PetSpaManagement.BLL\\PetSpaManagement.BLL.csproj|e:\\semester5\\prn212\\assignment\\petspamanagement\\petspamanagement.bll\\services\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27C6A94E-F215-4AD4-A35C-CC071FE3BA6B}|PetSpaManagement.BLL\\PetSpaManagement.BLL.csproj|solutionrelative:petspamanagement.bll\\services\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|e:\\semester5\\prn212\\assignment\\petspamanagement\\petspamanagement\\servicemanagement.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|solutionrelative:petspamanagement\\servicemanagement.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB66863C-6446-4583-A065-6D067F8606CB}|PetSpaManagement.DAL\\PetSpaManagement.DAL.csproj|e:\\semester5\\prn212\\assignment\\petspamanagement\\petspamanagement.dal\\repositories\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB66863C-6446-4583-A065-6D067F8606CB}|PetSpaManagement.DAL\\PetSpaManagement.DAL.csproj|solutionrelative:petspamanagement.dal\\repositories\\servicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB66863C-6446-4583-A065-6D067F8606CB}|PetSpaManagement.DAL\\PetSpaManagement.DAL.csproj|e:\\semester5\\prn212\\assignment\\petspamanagement\\petspamanagement.dal\\petspamanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB66863C-6446-4583-A065-6D067F8606CB}|PetSpaManagement.DAL\\PetSpaManagement.DAL.csproj|solutionrelative:petspamanagement.dal\\petspamanagementcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|e:\\semester5\\prn212\\assignment\\petspamanagement\\petspamanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|solutionrelative:petspamanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CB66863C-6446-4583-A065-6D067F8606CB}|PetSpaManagement.DAL\\PetSpaManagement.DAL.csproj|e:\\semester5\\prn212\\assignment\\petspamanagement\\petspamanagement.dal\\entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CB66863C-6446-4583-A065-6D067F8606CB}|PetSpaManagement.DAL\\PetSpaManagement.DAL.csproj|solutionrelative:petspamanagement.dal\\entities\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|e:\\semester5\\prn212\\assignment\\petspamanagement\\petspamanagement\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|solutionrelative:petspamanagement\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|e:\\semester5\\prn212\\assignment\\petspamanagement\\petspamanagement\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5B07FF4-3332-4E58-AA0A-00D4A231A1B1}|PetSpaManagement\\PetSpaManagement.csproj|solutionrelative:petspamanagement\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 265,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ServiceManagement.xaml",
+              "DocumentMoniker": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\ServiceManagement.xaml",
+              "RelativeDocumentMoniker": "PetSpaManagement\\ServiceManagement.xaml",
+              "ToolTip": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\ServiceManagement.xaml",
+              "RelativeToolTip": "PetSpaManagement\\ServiceManagement.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-30T08:05:54.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PetSpaManagementContext.cs",
+              "DocumentMoniker": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement.DAL\\PetSpaManagementContext.cs",
+              "RelativeDocumentMoniker": "PetSpaManagement.DAL\\PetSpaManagementContext.cs",
+              "ToolTip": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement.DAL\\PetSpaManagementContext.cs",
+              "RelativeToolTip": "PetSpaManagement.DAL\\PetSpaManagementContext.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T07:37:53.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Service.cs",
+              "DocumentMoniker": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement.DAL\\Entities\\Service.cs",
+              "RelativeDocumentMoniker": "PetSpaManagement.DAL\\Entities\\Service.cs",
+              "ToolTip": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement.DAL\\Entities\\Service.cs",
+              "RelativeToolTip": "PetSpaManagement.DAL\\Entities\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T07:59:01.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement.BLL\\Services\\ServiceController.cs",
+              "RelativeDocumentMoniker": "PetSpaManagement.BLL\\Services\\ServiceController.cs",
+              "ToolTip": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement.BLL\\Services\\ServiceController.cs",
+              "RelativeToolTip": "PetSpaManagement.BLL\\Services\\ServiceController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAYwCIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T08:16:48.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceRepository.cs",
+              "DocumentMoniker": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement.DAL\\Repositories\\ServiceRepository.cs",
+              "RelativeDocumentMoniker": "PetSpaManagement.DAL\\Repositories\\ServiceRepository.cs",
+              "ToolTip": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement.DAL\\Repositories\\ServiceRepository.cs",
+              "RelativeToolTip": "PetSpaManagement.DAL\\Repositories\\ServiceRepository.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAkwC0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T08:12:49.123Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceManagement.xaml.cs",
+              "DocumentMoniker": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\ServiceManagement.xaml.cs",
+              "RelativeDocumentMoniker": "PetSpaManagement\\ServiceManagement.xaml.cs",
+              "ToolTip": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\ServiceManagement.xaml.cs",
+              "RelativeToolTip": "PetSpaManagement\\ServiceManagement.xaml.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwFgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T08:09:02.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\appsettings.json",
+              "RelativeDocumentMoniker": "PetSpaManagement\\appsettings.json",
+              "ToolTip": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\appsettings.json",
+              "RelativeToolTip": "PetSpaManagement\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-30T07:27:33.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "PetSpaManagement\\MainWindow.xaml",
+              "ToolTip": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\MainWindow.xaml",
+              "RelativeToolTip": "PetSpaManagement\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-30T07:14:34.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "PetSpaManagement\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\Semester5\\PRN212\\Assignment\\PetSpaManagement\\PetSpaManagement\\MainWindow.xaml.cs",
+              "RelativeToolTip": "PetSpaManagement\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T07:14:32.019Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 135,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
