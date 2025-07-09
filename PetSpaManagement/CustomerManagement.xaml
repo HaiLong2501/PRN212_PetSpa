@@ -1,0 +1,425 @@
+﻿<Window x:Class="PetSpaManagement.CustomerManagement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PetSpaManagement"
+        mc:Ignorable="d"
+        Title="CustomerManagement" Height="450" Width="800" Loaded="Window_Loaded" WindowState="Maximized">
+    <Window.Resources>
+        <!-- Styles -->
+        <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#2C3E50"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#3498DB"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#2980B9"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="15,8"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#2980B9"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#21618C"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DeleteButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="#E74C3C"/>
+            <Setter Property="BorderBrush" Value="#C0392B"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#C0392B"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="EditButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="#F39C12"/>
+            <Setter Property="BorderBrush" Value="#E67E22"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#E67E22"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="SuccessButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="#27AE60"/>
+            <Setter Property="BorderBrush" Value="#229954"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#229954"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Padding" Value="8,5"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="BorderBrush" Value="#BDC3C7"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+            <Setter Property="Padding" Value="8,5"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="BorderBrush" Value="#BDC3C7"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="DatePickerStyle" TargetType="DatePicker">
+            <Setter Property="Padding" Value="8,5"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="BorderBrush" Value="#BDC3C7"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#34495E" CornerRadius="0">
+            <Grid>
+                <TextBlock Text="🐾 PET SPA - QUẢN LÝ KHÁCH HÀNG" 
+                       FontSize="24" FontWeight="Bold" 
+                       Foreground="White" 
+                       VerticalAlignment="Center" 
+                       HorizontalAlignment="Left"
+                       Margin="20,0"/>
+
+                <StackPanel Orientation="Horizontal" 
+                       HorizontalAlignment="Right" 
+                       VerticalAlignment="Center" 
+                       Margin="0,0,20,0">
+                    <TextBlock Text="Xin chào, Admin" 
+                           Foreground="White" 
+                           FontSize="14" 
+                           VerticalAlignment="Center" 
+                           Margin="0,0,15,0"/>
+                    <Button Content="Đăng xuất" 
+                        Background="#E74C3C" 
+                        Foreground="White" 
+                        BorderThickness="0" 
+                        Padding="10,5" 
+                        FontSize="12"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Main Content -->
+        <Grid Grid.Row="1" Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Panel - Customer and Pet Form -->
+            <Border Grid.Column="0" Background="White" 
+                BorderBrush="#E5E5E5" BorderThickness="1" 
+                CornerRadius="8" Padding="20" Margin="0,0,10,0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <!-- Customer Information Section -->
+                        <Border BorderBrush="#3498DB" BorderThickness="2" 
+                            CornerRadius="8" Padding="15" Margin="0,0,0,20">
+                            <StackPanel>
+                                <TextBlock Text="📋 Thông Tin Khách Hàng" Style="{StaticResource HeaderTextStyle}"/>
+                                <TextBlock Text="(Chỉnh sửa thông tin khách hàng)" 
+                                       FontSize="12" Foreground="#7F8C8D" 
+                                       FontStyle="Italic" Margin="0,0,0,15"/>
+
+                                <TextBlock Text="Mã Khách Hàng:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <TextBox Name="txtCustomerId" Style="{StaticResource TextBoxStyle}" 
+                                     IsEnabled="False" Background="#F8F9FA"/>
+
+                                <TextBlock Text="Họ và Tên:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <TextBox Name="txtCustomerName" Style="{StaticResource TextBoxStyle}" />
+
+                                <TextBlock Text="Số Điện Thoại:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <TextBox Name="txtPhone" Style="{StaticResource TextBoxStyle}" />
+
+                                <TextBlock Text="Email:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <TextBox Name="txtEmail" Style="{StaticResource TextBoxStyle}" />
+
+                                <TextBlock Text="Địa Chỉ:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <TextBox Name="txtAddress" Style="{StaticResource TextBoxStyle}" 
+                                     Height="60" TextWrapping="Wrap" 
+                                     VerticalScrollBarVisibility="Auto"
+                                     AcceptsReturn="True"/>
+
+                                <!-- Customer Action Buttons -->
+                                <StackPanel Orientation="Horizontal" 
+                                       HorizontalAlignment="Center" 
+                                       Margin="0,15,0,0">
+                                    <Button Name="btnUpdateCustomer" Content="💾 Cập Nhật KH" 
+                                        Visibility="Collapsed"
+                                        Style="{StaticResource SuccessButtonStyle}" Click="btnUpdateCustomer_Click" 
+                                        />
+                                    <Button Name="btnCancelCustomer" Content="❌ Hủy KH" 
+                                        Visibility="Collapsed"
+                                        Style="{StaticResource ButtonStyle}"
+                                        Background="#95A5A6" BorderBrush="#7F8C8D" 
+                                        />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+
+                        <!-- Pet Information Section -->
+                        <Border BorderBrush="#E67E22" BorderThickness="2" 
+                            CornerRadius="8" Padding="15">
+                            <StackPanel>
+                                <TextBlock Text="🐕 Thông Tin Thú Cưng" Style="{StaticResource HeaderTextStyle}"/>
+                                <TextBlock Text="(Chỉnh sửa thông tin thú cưng)" 
+                                       FontSize="12" Foreground="#7F8C8D" 
+                                       FontStyle="Italic" Margin="0,0,0,15"/>
+
+                                <TextBlock Text="Mã Thú Cưng:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <TextBox Name="txtPetId" Style="{StaticResource TextBoxStyle}" 
+                                     IsEnabled="False" Background="#F8F9FA"/>
+
+                                <TextBlock Text="Tên Thú Cưng:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <TextBox Name="txtPetName" Style="{StaticResource TextBoxStyle}" />
+
+                                <TextBlock Text="Loài:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <ComboBox Name="cmbSpecies" Style="{StaticResource ComboBoxStyle}">
+                                    
+                                </ComboBox>
+
+                                <TextBlock Text="Giống:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <TextBox Name="txtBreed" Style="{StaticResource TextBoxStyle}" />
+
+                                <TextBlock Text="Giới Tính:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <ComboBox Name="cmbGender" Style="{StaticResource ComboBoxStyle}">
+                                   
+                                </ComboBox>
+
+                                <TextBlock Text="Ngày Sinh:" FontWeight="Medium" Margin="0,5,0,5"/>
+                                <DatePicker Name="dpBirthday" Style="{StaticResource DatePickerStyle}" />
+
+                                <!-- Pet Action Buttons -->
+                                <StackPanel Orientation="Horizontal" 
+                                       HorizontalAlignment="Center" 
+                                       Margin="0,15,0,0">
+                                    <Button Name="btnUpdatePet" Content="💾 Cập Nhật TC" 
+                                        Visibility="Collapsed"
+                                        Style="{StaticResource SuccessButtonStyle}" Click="btnUpdatePet_Click" 
+                                        />
+                                    <Button Name="btnCancelPet" Content="❌ Hủy TC" 
+                                        Visibility="Collapsed"
+                                        Style="{StaticResource ButtonStyle}"
+                                        Background="#95A5A6" BorderBrush="#7F8C8D" 
+                                        />
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+            <!-- Right Panel - Customer List -->
+            <Border Grid.Column="1" Background="White" 
+                BorderBrush="#3498DB" BorderThickness="1" 
+                CornerRadius="8" Padding="20" Margin="10,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Title and Search -->
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,15">
+                        <TextBlock Text="📋 Danh Sách Khách Hàng" Style="{StaticResource HeaderTextStyle}"/>
+                        <TextBlock Text="(Khách hàng được tạo khi đặt lịch)" FontSize="12" 
+                               Foreground="#7F8C8D" VerticalAlignment="Bottom" 
+                               FontStyle="Italic"
+                               Margin="15,0,0,10"/>
+                    </StackPanel>
+
+                    <!-- Search and Filter -->
+                    <Grid Grid.Row="1" Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            
+                        </Grid.ColumnDefinitions>
+
+                        <TextBox Name="txtSearch" Grid.Column="0" 
+                             Style="{StaticResource TextBoxStyle}"
+                             Margin="0,0,10,0"
+                             FontStyle="Italic" Foreground="#7F8C8D"
+                             Text="Tìm kiếm theo tên, SĐT, email..."
+                             GotFocus="txtSearch_GotFocus"
+                             LostFocus="txtSearch_LostFocus" TextChanged="txtSearch_TextChanged"/>
+
+                        <Button Name="btnSearch" Grid.Column="1" 
+                            Content="🔍 Tìm kiếm" 
+                            Style="{StaticResource ButtonStyle}"
+                            Click="btnSearch_Click"/>
+                    </Grid>
+
+                    <!-- Customer DataGrid -->
+                    <DataGrid x:Name="dgCustomers" Grid.Row="2" 
+                          AutoGenerateColumns="False"
+                          CanUserAddRows="False"
+                          CanUserDeleteRows="False"
+                          GridLinesVisibility="Horizontal"
+                          HeadersVisibility="Column"
+                          Background="White"
+                          BorderBrush="#E5E5E5"
+                          BorderThickness="1"
+                          FontSize="12"
+                          SelectionChanged="dgCustomers_SelectionChanged">
+
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="DataGridColumnHeader">
+                                <Setter Property="Background" Value="#ECF0F1"/>
+                                <Setter Property="Foreground" Value="#2C3E50"/>
+                                <Setter Property="FontWeight" Value="Bold"/>
+                                <Setter Property="Padding" Value="8"/>
+                                <Setter Property="BorderBrush" Value="#BDC3C7"/>
+                                <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+
+                        <DataGrid.RowStyle>
+                            <Style TargetType="DataGridRow">
+                                <Setter Property="Background" Value="White"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#F8F9FA"/>
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#E3F2FD"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.RowStyle>
+
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Mã KH" Binding="{Binding CustomerId}" Width="70"/>
+                            <DataGridTextColumn Header="Họ và Tên" Binding="{Binding FullName}" Width="150"/>
+                            <DataGridTextColumn Header="Số ĐT" Binding="{Binding Phone}" Width="120"/>
+                            <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="180"/>
+                            <DataGridTextColumn Header="Địa chỉ" Binding="{Binding Address}" Width="200"/>
+
+                            <DataGridTemplateColumn Header="Thao tác KH" Width="130">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                            <Button x:Name="btnEdit" Content="✏️ Sửa" 
+                                                Style="{StaticResource EditButtonStyle}"
+                                                Width="80" Height="35" 
+                                                FontSize="10" Margin="2" Click="btnEdit_Click"  
+                                                />
+                                            <!-- <Button Content="🗑️ Xóa" 
+                                                Style="{StaticResource DeleteButtonStyle}"
+                                                Width="60" Height="30" 
+                                                FontSize="10" Margin="2" 
+                                                />-->
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                    <!-- Pet Information Panel -->
+                    <Border Grid.Row="3" Background="#F8F9FA" 
+                        BorderBrush="#E67E22" BorderThickness="2" 
+                        CornerRadius="8" Padding="15" Margin="0,15,0,0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+                                <TextBlock Text="🐕 Danh Sách Thú Cưng" 
+                                       FontWeight="Bold" FontSize="14" 
+                                       Foreground="#2C3E50"/>
+                                <TextBlock Text="(Chọn khách hàng để xem thú cưng)" 
+                                       FontSize="12" Foreground="#7F8C8D" 
+                                       FontStyle="Italic" Margin="15,0,0,0"/>
+                            </StackPanel>
+
+                            <DataGrid x:Name="dgPets" Grid.Row="1" 
+                                  AutoGenerateColumns="False"
+                                  CanUserAddRows="False"
+                                  CanUserDeleteRows="False"
+                                  GridLinesVisibility="Horizontal"
+                                  HeadersVisibility="Column"
+                                  Background="White"
+                                  BorderBrush="#E5E5E5"
+                                  BorderThickness="1"
+                                  FontSize="11"
+                                  MaxHeight="120"
+                                  SelectionChanged="dgPets_SelectionChanged">
+
+                                <DataGrid.ColumnHeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="Background" Value="#ECF0F1"/>
+                                        <Setter Property="Foreground" Value="#2C3E50"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="Padding" Value="5"/>
+                                        <Setter Property="BorderBrush" Value="#BDC3C7"/>
+                                        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Mã" Binding="{Binding PetId}" Width="50"/>
+                                    <DataGridTextColumn Header="Tên" Binding="{Binding PetName}" Width="100"/>
+                                    <DataGridTextColumn Header="Loài" Binding="{Binding Species}" Width="80"/>
+                                    <DataGridTextColumn Header="Giống" Binding="{Binding Breed}" Width="100"/>
+                                    <DataGridTextColumn Header="Giới tính" Binding="{Binding Gender}" Width="80"/>
+                                    <DataGridTextColumn Header="Ngày sinh" Binding="{Binding Birthday, StringFormat=dd/MM/yyyy}" Width="100"/>
+
+                                    <DataGridTemplateColumn Header="Thao tác TC" Width="130">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                    <Button x:Name="btnEditPet" Content="✏️ Sửa" 
+                                                        Style="{StaticResource EditButtonStyle}"
+                                                        Width="80" Height="35" 
+                                                        FontSize="9" Margin="1" Click="btnEditPet_Click" 
+                                                        />
+                                                    <!-- <Button Content="🗑️ Xóa" 
+                                                        Style="{StaticResource DeleteButtonStyle}"
+                                                        Width="60" Height="25" 
+                                                        FontSize="9" Margin="1" 
+                                                        /> -->
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

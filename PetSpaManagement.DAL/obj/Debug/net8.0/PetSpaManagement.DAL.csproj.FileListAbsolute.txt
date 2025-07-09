@@ -12,3 +12,4 @@ E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.DAL\obj\Debug\n
 E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.DAL\obj\Debug\net8.0\PetSpaManagement.DAL.pdb
 E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.DAL\obj\Debug\net8.0\PetSpaManagement.DAL.genruntimeconfig.cache
 E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.DAL\obj\Debug\net8.0\ref\PetSpaManagement.DAL.dll
+E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.DAL\obj\Debug\net8.0\PetSpaManagement.DAL.sourcelink.json

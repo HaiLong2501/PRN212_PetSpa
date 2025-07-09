@@ -10,7 +10,7 @@ namespace PetSpaManagement.BLL.Services
 {
     public class ServiceController
     {
-        public ServiceRepository _repo = new();
+        private ServiceRepository _repo = new();
 
         public List<Service> GetAllService()
         {

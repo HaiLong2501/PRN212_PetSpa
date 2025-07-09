@@ -76,3 +76,6 @@ E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement\obj\Debug\net8.
 E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement\obj\Debug\net8.0-windows\ref\PetSpaManagement.dll
 E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement\obj\Debug\net8.0-windows\ServiceManagement.g.cs
 E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement\obj\Debug\net8.0-windows\ServiceManagement.baml
+E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement\obj\Debug\net8.0-windows\CustomerManagement.g.cs
+E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement\obj\Debug\net8.0-windows\CustomerManagement.baml
+E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement\obj\Debug\net8.0-windows\PetSpaManagement.sourcelink.json

@@ -13,3 +13,4 @@ E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.BLL\obj\Debug\n
 E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.BLL\obj\Debug\net8.0\refint\PetSpaManagement.BLL.dll
 E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.BLL\obj\Debug\net8.0\PetSpaManagement.BLL.pdb
 E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.BLL\obj\Debug\net8.0\ref\PetSpaManagement.BLL.dll
+E:\Semester5\PRN212\Assignment\PetSpaManagement\PetSpaManagement.BLL\obj\Debug\net8.0\PetSpaManagement.BLL.sourcelink.json
