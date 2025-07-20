@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetSpaManagement.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b14ce91668c51f3d46b1f2d079afaddc794c38be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8535cfe8a22ef10900e6deae7eaf06cb0b351f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetSpaManagement.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetSpaManagement.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -270,7 +270,7 @@
                              FontStyle="Italic" Foreground="#7F8C8D"
                              Text="Tìm kiếm theo tên, SĐT, email..."
                              GotFocus="txtSearch_GotFocus"
-                             LostFocus="txtSearch_LostFocus" TextChanged="txtSearch_TextChanged"/>
+                             LostFocus="txtSearch_LostFocus"/>
 
                         <Button Name="btnSearch" Grid.Column="1" 
                             Content="🔍 Tìm kiếm" 

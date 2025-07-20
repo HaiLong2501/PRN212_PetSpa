@@ -283,10 +283,6 @@ namespace PetSpaManagement
             btnUpdatePet.Visibility = Visibility.Visible;
         }
 
-        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-            
-        }
+        
     }
 }

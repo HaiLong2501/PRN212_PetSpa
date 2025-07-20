@@ -7,8 +7,6 @@ public partial class Booking
 {
     public int BookingId { get; set; }
 
-    public int? PetId { get; set; }
-
     public int? ReceptionistId { get; set; }
 
     public int? CareStaffId { get; set; }
@@ -19,11 +17,13 @@ public partial class Booking
 
     public string? Notes { get; set; }
 
+    public int? PetId { get; set; }
+
+    public decimal? TotalAmount { get; set; }
+
     public virtual ICollection<BookingDetail> BookingDetails { get; set; } = new List<BookingDetail>();
 
     public virtual User? CareStaff { get; set; }
-
-    public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
 
     public virtual Pet? Pet { get; set; }
 

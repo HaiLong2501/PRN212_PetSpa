@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PetSpaManagement.DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,16 +14,16 @@ namespace PetSpaManagement.DAL.Repositories
         {
             _context = new PetSpaManagementContext();
         }
-        public List<Entities.Pet> GetAllPets()
+        public List<Pet> GetAllPets()
         {
             return _context.Pets.ToList();
         }
-        public void AddPet(Entities.Pet pet)
+        public void AddPet(Pet pet)
         {
             _context.Pets.Add(pet);
             _context.SaveChanges();
         }
-        public void UpdatePet(Entities.Pet pet)
+        public void UpdatePet(Pet pet)
         {
             var existingPet = _context.Pets.Find(pet.PetId);
             if (existingPet != null)
@@ -34,7 +35,7 @@ namespace PetSpaManagement.DAL.Repositories
                 _context.SaveChanges();
             }
         }
-        public void DeletePet(Entities.Pet pet)
+        public void DeletePet(Pet pet)
         {
             var existingPet = _context.Pets.Find(pet.PetId);
             if (existingPet != null)

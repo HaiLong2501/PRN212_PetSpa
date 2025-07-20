@@ -13,6 +13,8 @@ public partial class BookingDetail
 
     public int? Quantity { get; set; }
 
+    public string? Status { get; set; }
+
     public virtual Booking? Booking { get; set; }
 
     public virtual Service? Service { get; set; }
